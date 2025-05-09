@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+               android:text="Calendar year"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <EditText
+                android:id="@+id/edtcalendar"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnConvert"
+                android:text="Convert"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="lunar year"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <EditText
+                android:id="@+id/edtlunar"
+                android:layout_weight="1"/>
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

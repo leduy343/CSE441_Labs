@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtPf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPf">
+        <TableRow>
+            <TextView
+                android:text="Name: "
+                />
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="CMND: "
+                />
+            <EditText
+                android:id="@+id/edtCMND"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TextView
+            android:gravity="center"
+            android:text="Bằng cấp"/>
+        <RadioGroup
+            android:id="@+id/group"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rd1"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trung cap"/>
+            <RadioButton
+                android:id="@+id/rd2"
+                android:text="Cao dang"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rd3"
+                android:text="Dai hoc"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+        <TextView
+            android:gravity="center"
+            android:text="So thich"/>
+        <TableRow>
+            <CheckBox
+                android:id="@+id/chkbao"
+                android:layout_weight="1"
+                android:text="Doc bao"/>
+            <CheckBox
+                android:id="@+id/chksach"
+                android:layout_weight="1"
+                android:text="Doc sach"/>
+            <CheckBox
+                android:id="@+id/chkcode"
+                android:layout_weight="1"
+                android:text="Doc coding"/>
+        </TableRow>
+        <TextView
+            android:gravity="center"
+            android:text="Thong tin bo sung"/>
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/edtBoSung"
+            />
+        <Button
+            android:id="@+id/btnsend"
+            android:text="Gui thong tin"
+            />
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

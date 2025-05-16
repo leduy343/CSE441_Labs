@@ -25,8 +25,9 @@
                 android:layout_weight="1"/>
         </TableRow>
         <TableRow>
-
+        <TextView/>
             <Button
+                android:layout_weight="1"
                 android:id="@+id/btnConvert"
                 android:text="Convert"/>
         </TableRow>

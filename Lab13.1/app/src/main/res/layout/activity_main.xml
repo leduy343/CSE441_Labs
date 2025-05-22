@@ -19,12 +19,25 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:background="#5576BE"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"/>
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AutoCompleteTextView" />
+            android:text="AutoCompleteTextView"
+            android:completionThreshold="1"
+            android:ems="10"/>
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MultiAutoCompleteTextView"
+            android:completionThreshold="1"
+            android:ems="10"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

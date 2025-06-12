@@ -2,6 +2,7 @@ package com.example.tabselector_2;
 
 import android.os.Bundle;
 import android.text.Editable;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TabHost;
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         addEvent();
 
     }
-
     private void addEvent(){
         tab.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
@@ -77,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
         tab1.setIndicator("",getResources().getDrawable(R.drawable.search));
         tab.addTab(tab1);
         TabHost.TabSpec tab2 = tab.newTabSpec("t2");
-        tab2.setContent(R.id.tab1);
+        tab2.setContent(R.id.tab2);
         tab2.setIndicator("",getResources().getDrawable(R.drawable.search));
         tab.addTab(tab2);
         TabHost.TabSpec tab3 = tab.newTabSpec("t3");
-        tab3.setContent(R.id.tab1);
+        tab3.setContent(R.id.tab3);
         tab3.setIndicator("",getResources().getDrawable(R.drawable.search));
         tab.addTab(tab3);
 

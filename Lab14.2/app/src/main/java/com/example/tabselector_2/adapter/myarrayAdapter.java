@@ -44,7 +44,21 @@ public class myarrayAdapter extends ArrayAdapter<Item> {
         }else {
             btnlike.setImageResource(R.drawable.unlike);
         }
-
+        btnlike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle trạng thái thích
+                if (myitem.getThich() == 1) {
+                    myitem.setThich(0);
+                    btnlike.setImageResource(R.drawable.unlike);
+                } else {
+                    myitem.setThich(1);
+                    btnlike.setImageResource(R.drawable.favorite);
+                }
+                // Nếu cần cập nhật lại dữ liệu toàn bộ list
+                // notifyDataSetChanged(); // chỉ dùng nếu trạng thái ảnh hưởng đến cả list
+            }
+        });
         TextView txtanme = convertView.findViewById(R.id.txtname);
         txtanme.setText(myitem.getTieude());
         TextView txtmaso = convertView.findViewById(R.id.txtmaso);
